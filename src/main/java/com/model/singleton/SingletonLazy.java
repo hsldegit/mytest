@@ -9,7 +9,7 @@ package com.model.singleton;
  */
 public class SingletonLazy {
 
-    private static SingletonLazy singletonLazy = null;
+    private volatile static SingletonLazy singletonLazy = null;
 
     private SingletonLazy() {
 

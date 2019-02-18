@@ -11,7 +11,6 @@ public class InsertionSort {
 
 
     public static void main(String[] args) {
-
         int[] arr = {9, 8, 7, 6, 4};
         sort(arr);
     }

@@ -43,7 +43,7 @@ public class MyInvocationHandler implements InvocationHandler {
     public static void main(String[] args) throws Exception {
         HelloService helloService = new HelloServiceImpl();
 //        // 生成代理类的class对象
-//        Class clazz = Proxy.getProxyClass(helloService.getClass().getClassLoader(), helloService
+//        Class clazz = Proxy.getProxyClass(helloService.getClass().getClassLoader(), hello Service
 //                .getClass().getInterfaces());
 //        // 创建InvocationHandler
 //        InvocationHandler myInvocationHandler = new MyInvocationHandler(helloService);
