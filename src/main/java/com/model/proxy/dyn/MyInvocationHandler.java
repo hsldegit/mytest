@@ -2,10 +2,12 @@ package com.model.proxy.dyn;
 
 import com.model.proxy.sta.HelloService;
 import com.model.proxy.sta.HelloServiceImpl;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * JDK动态代理
@@ -57,6 +59,5 @@ public class MyInvocationHandler implements InvocationHandler {
                 helloService.getClass().getInterfaces(), new MyInvocationHandler(helloService));
 
         proxy.hello("huang");
-
     }
 }
