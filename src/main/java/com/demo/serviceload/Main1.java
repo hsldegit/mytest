@@ -1,6 +1,7 @@
 package com.demo.serviceload;
 
 import java.util.ServiceLoader;
+import java.util.concurrent.Executors;
 
 /**
  * @author huangshilu
@@ -16,7 +17,7 @@ public class Main1 {
             s.shout();
         }
 
-
+        Executors.newScheduledThreadPool(1);
 
     }
 }
