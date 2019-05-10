@@ -15,6 +15,10 @@ public class BubbleSort {
         sort(arr);
     }
 
+    /**
+     *
+     * @param arr
+     */
     public static void sort(int[] arr) {
         System.out.println("排序开始-------------arr=" + Arrays.toString(arr));
         for (int i = 0; i < arr.length - 1; i++) {
