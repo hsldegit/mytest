@@ -19,5 +19,4 @@ public class SingletonHungry {
         return singletonHungry;
     }
 
-
 }

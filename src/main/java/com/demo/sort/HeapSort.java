@@ -10,24 +10,39 @@ import java.util.Arrays;
 public class HeapSort {
 
     public static void main(String[] args) {
-        int[] arr = {9, 8, 7, 6, 5, 4, 3, 2, 1};
+        int[] arr = {1, 2, 3, 4, 5, 6, 7};
         sort(arr);
         System.out.println(Arrays.toString(arr));
     }
 
     public static void sort(int[] arr) {
-        //1.构建大顶堆
+        System.out.println("构建大顶堆--------------------");
+        System.out.println(Arrays.toString(arr));
+        //1.构建大顶堆 -i = 2 i=1 i=0
         for (int i = arr.length / 2 - 1; i >= 0; i--) {
             //从第一个非叶子结点从下至上，从右至左调整结构
             adjustHeap(arr, i, arr.length);
         }
+        System.out.println("--------------------");
+        //结果
+        //    3
+        //  5    6
+        //4  2  1  7
+
+        //j = 6 5 4 3 2 1
         //2.调整堆结构+交换堆顶元素与末尾元素
+        //第一次吧最大的放到最后一个  然后上浮 第二次把最大的放到倒数第二个  然后上浮 第三个放倒数第三个 然后上浮 ----
         for (int j = arr.length - 1; j > 0; j--) {
             swap(arr, 0, j);//将堆顶元素与末尾元素进行交换
             adjustHeap(arr, 0, j);//重新对堆进行调整
         }
 
     }
+
+
+
+
+
 
     /**
      * 调整大顶堆（仅是调整过程，建立在大顶堆已构建的基础上）
@@ -50,6 +65,7 @@ public class HeapSort {
             }
         }
         arr[i] = temp;//将temp值放到最终的位置
+        System.out.println(Arrays.toString(arr));
     }
 
     /**
