@@ -26,6 +26,11 @@ public class LeetCode0001 {
 
     public static void main(String[] args) {
         int[] nums = {3, 3};
+
+
+        //x * x = 5;
+        //求x
+
         System.out.println(Arrays.toString(twoSum(nums, 6)));
     }
 

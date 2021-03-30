@@ -12,14 +12,10 @@ public class Test1 {
 
     public static void main(String[] args) {
 
-        Unsafe unsafe = Unsafe.getUnsafe();
-
+        System.out.println(711175 % 64);
 
 
     }
-
-
-
 
 
 }

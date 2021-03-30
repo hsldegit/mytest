@@ -29,7 +29,7 @@ public class Demo1 {
 
     public static void main(String[] args) throws Exception{
         final Demo1 test = new Demo1();
-        //test.set();
+        test.set();
         System.out.println(test.getLong());
         System.out.println(test.getString());
 

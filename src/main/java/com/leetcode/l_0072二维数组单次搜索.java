@@ -1,5 +1,7 @@
 package com.leetcode;
 
+import org.springframework.util.StringUtils;
+
 /**
  * @Authror huangshilu
  * @Date 2020/12/18 17:57
@@ -9,7 +11,24 @@ package com.leetcode;
 public class l_0072二维数组单次搜索 {
 
     public static void main(String[] args) {
-        System.out.println();
+        String s = "# CTE-08931\n" +
+                "version:6.0.6\n" +
+                "git_firewall:e936zd\n" +
+                "arch_bits:64\n" +
+                "\n" +
+                "# E6S932-DB-Security-A01\n" +
+                "mixDB:192.168.5.1\n" +
+                "minDB:192.168.5.2\n";
+
+        String[] split = s.split("\n");
+        for (String s1 : split) {
+            String[] split1 = s1.split(":");
+            if (split1[0].equals("arch_bits")){
+                System.out.println(split1[1]);
+            }
+        }
+
+        //System.out.println("A:01".split(":")[1]);
     }
 
     public static boolean exist(char[][] board, String word) {
@@ -22,6 +41,7 @@ public class l_0072二维数组单次搜索 {
         }
         return false;
     }
+
     public static boolean dfs(char[][] board, String word, int i, int j, int k) {
         if (k == word.length()) {
             return true;
