@@ -25,13 +25,31 @@ public class LeetCode0001 {
 
 
     public static void main(String[] args) {
-        int[] nums = {3, 3};
 
-
+        int totalPage = 251;
+        System.out.println(totalPage / 50);
+        long offset = 0L;
+        for (int i = 1; i <= totalPage / 50; i++) {
+            int startPage = i * 50 + 1;
+            if (startPage > totalPage) {
+                break;
+            }
+            int endPage = (i + 1) * 50;
+            if (endPage >= totalPage) {
+                endPage = totalPage;
+            }
+            offset = aaa(startPage - 1);
+            System.out.println("startPage=" + (startPage - (i * 50)) + ",endPage=" + (endPage - (i * 50)) + ",offset=" + offset);
+        }
         //x * x = 5;
         //求x
 
-        System.out.println(Arrays.toString(twoSum(nums, 6)));
+        //System.out.println(Arrays.toString(twoSum(nums, 6)));
+    }
+
+    public static long aaa(int page) {
+        System.out.println("getOffsetPage=" + page);
+        return page * 100;
     }
 
 

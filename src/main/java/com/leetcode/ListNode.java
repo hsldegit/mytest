@@ -35,5 +35,19 @@ public class ListNode {
         return sb.toString();
     }
 
+    public static ListNode builderListNode(int[] arr) {
+        ListNode listNode = new ListNode(arr[0]);
+        setNextNode(arr, 1, listNode);
+        return listNode;
+    }
+
+    public static void setNextNode(int[] arr, int nextIndex, ListNode listNode) {
+        if (nextIndex > arr.length - 1) {
+            return;
+        }
+        ListNode nextNode = new ListNode(arr[nextIndex]);
+        listNode.next = nextNode;
+        setNextNode(arr, nextIndex + 1, nextNode);
+    }
 
 }
