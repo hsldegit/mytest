@@ -21,7 +21,7 @@ public class ProducerConsumerWithWaitNofity {
         c1.setName("消费者1");
         //ConsumerThread c2 = new ConsumerThread(resource);
         //ConsumerThread c3 = new ConsumerThread(resource);
-
+        //common request
         p1.start();
         p2.start();
         p3.start();
